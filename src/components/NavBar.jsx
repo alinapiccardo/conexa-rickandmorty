@@ -3,7 +3,7 @@ import HelpDropdown from "./Help.jsx";
 
 const NavBar = () => {
 	return (
-		<nav className="w-full bg-background-800">
+		<nav className="w-full bg-background-800/80">
 			<div className="flex justify-between shadow-lg">
 				<div className="logo w-52 mx-5">
 					<img src="/logo.png" alt="logo" />

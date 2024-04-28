@@ -20,11 +20,10 @@
 
 body {
 	color: rgb(var(--foreground-rgb));
-	background: linear-gradient(
-		180deg,
-		rgb(var(--background-start-rgb)),
-		rgb(var(--background-end-rgb))
-	);
+	background-image: url(../../public/background.jpeg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: auto;
 }
 
 @layer utilities {

@@ -7,26 +7,30 @@ const CharacterCard = ({ character, isSelected, onSelect }) => {
 
 	return (
 		<div
-			className={`w-[95%] my-3 border border-secondary-200 bg-primary-300 bg-opacity-20 rounded-lg shadow-md ${
-				isSelected ? "border-b-4 border-r-4 border-secondary-200" : ""
+			className={`w-full my-2 border-2 p-1 border-secondary-200 bg-primary-300/10 backdrop-blur-lg rounded-lg shadow-md ${
+				isSelected
+					? "border-b-4 border-r-4 border-secondary-100 bg-primary-300/80"
+					: ""
 			}`}
 			onClick={handleClick}
 		>
-			<div className="flex">
+			<div className="flex flex-col">
 				<img
 					src={character.image}
 					alt={character.name}
-					className="rounded-l-md w-40 object-cover mr-6"
+					className="rounded-md w-full object-cover"
 				/>
-				<div className="flex flex-col justify-between py-4">
-					<h2 className="text-lg text-text-900 font-poppins font-semibold">
-						{character.name}
-					</h2>
-					<div className="flex mx-2">
-						<p className="text-xs font-poppins text-text-600 pr-2">
+				<h2 className="text-md text-center text-primary-100 font-poppins font-semibold pt-2">
+					{character.name}
+				</h2>
+				<div className="flex py-2 relative rounded-b-md justify-around">
+					<div className="bg-primary-100 p-2 rounded-md">
+						<p className="text-xs font-poppins text-primary-800">
 							Status: {character.status}
 						</p>
-						<p className="text-xs font-poppins text-text-600">
+					</div>
+					<div className="bg-primary-100 p-2 rounded-md">
+						<p className="text-xs font-poppins text-primary-800">
 							Species: {character.species}
 						</p>
 					</div>
