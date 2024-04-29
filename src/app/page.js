@@ -52,7 +52,6 @@ export default function Home() {
 			return;
 		}
 
-		// Check if the character is from section 1
 		const isSection1Character = characters.section1.includes(character);
 		if (selectedCharacters.length === 1) {
 			const selectedCharacter = selectedCharacters[0];
@@ -70,7 +69,6 @@ export default function Home() {
 			}
 		}
 
-		// Update the selected characters
 		let updatedSelectedCharacters;
 		if (isAlreadySelected) {
 			updatedSelectedCharacters = selectedCharacters.filter(
@@ -115,7 +113,6 @@ export default function Home() {
 		}
 	};
 
-	//add a button to deselect both characters
 	const handleResetCharacters = () => {
 		setSelectedCharacters([]);
 		setEpisodes([]);
